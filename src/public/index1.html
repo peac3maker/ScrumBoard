@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Backbone.js Todos</title>
+</head>
+
+<body>
+
+<h1>Persisting a Model</h1>
+
+<p>Open the Console of the browser and run this code:</p>
+
+<pre>
+    var todo = new Todo({ title: 'stuff' });
+    var todos = new TodosCollection([todo]);
+    todo.save();
+    todo.get('id');
+</pre>
+
+Check to see what happens on the server console
+
+
+<script src="js/jquery-2.1.0.js"></script>
+<script src="js/underscore.js"></script>
+<script src="js/backbone.js"></script>
+<script src="todos.js"></script>
+
+
+
+</body>
+</html>

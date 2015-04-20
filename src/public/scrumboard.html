@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Todo</title>
+    <style type="text/css">
+    .column-left{ float: left; width: 33%; height:100%; min-height:200px; border-right:1px solid #CBD2D8;}
+    .column-right{ float: right; width: 33%; height:100%; min-height:200px; }
+    .column-center{ display: inline-block; width: 33%; height: 100%; min-height:200px; border-right:1px solid #CBD2D8;}
+    #content{width:100%;}
+    .draggable{border: 1px solid; background-color:#E0E9F0;border: 1px solid #CBD2D8; color:#666;}
+    </style>
+</head>
+
+<body>
+
+<h1>Scrumboard</h1>
+<div id="content">
+        <div id="ToDo" class="column-left droppable"></div>
+        <div id="InProc" class="column-center droppable"></div>
+        <div id="Done" class="column-right droppable"></div>
+        <div>                    
+        <a href="#create">Create</a>
+        </div>
+</div>
+<div id="create">
+</div>
+<script type="text/template" id="item-template">
+    <div class="draggable">        
+        <%= title %>
+        <br />
+        <%= state %>
+        <br />
+        <%= cost %>
+        <br />
+        <%= responsible %>
+        <input type="hidden" value=<%=id%> class="id" />
+    </div>
+</script>
+
+<script type="text/template" id="create-template">
+    <form id="addBook" action="#">       
+        <p>Title:<input type="text" id="title" />
+        </p>
+        <p>State:<select id="state"><option>ToDo</option><option>InProc</option><option>Done</option></select>
+        </p>
+        <p>
+            Cost: <select id="cost"><option>1</option><option>2</option><option>3</option><option>5</option><option>8</option></select>
+        </p>
+        <p>
+            Responsible: <input type="text" id="responsible" />
+        </p>
+        <input type="submit" id="add-todo" value="create" />
+    </form>
+</script>
+
+<script src="js/jquery-2.1.0.js"></script>
+<script src="js/underscore.js"></script>
+<script src="js/backbone.js"></script>
+<script src="scrumboard.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+
+</body>
+</html>
