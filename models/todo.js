@@ -100,8 +100,6 @@ var Todo = {
   }
 };
 
-app.models.todo = Todo;
-
 
 exports.getAllEntries = function () {
   return Todo.all();
