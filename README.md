@@ -16,6 +16,7 @@ FireFox
 - underscore
 - jQuery
 - jQuery UI Dragable für einfache Drag and Drop Funktionalität.
+- Dynamische Zuweisung der Todos in das entsprechende Div
 
 
 #Funktionalität
