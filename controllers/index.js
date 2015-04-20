@@ -1,5 +1,5 @@
 
 module.exports = function(app) {
 
-  require('./todos_controller');
+  app.models.todo = require('./todos_controller');
 }
